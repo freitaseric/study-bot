@@ -1,4 +1,4 @@
-package me.freitaseric.commands;
+package me.freitaseric.commands.utils;
 
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 

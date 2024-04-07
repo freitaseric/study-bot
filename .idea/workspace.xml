@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c430b90-f42c-4b6f-9cf5-4d49eb78388a" name="Changes" comment="chore: inital commit">
+    <list default="true" id="4c430b90-f42c-4b6f-9cf5-4d49eb78388a" name="Changes" comment="feat: first command (/ping)">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/commands/PingCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/listeners/InteractionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/commands/utils/SearchCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/freitaseric/StudyBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/StudyBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/freitaseric/commands/PingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/commands/utils/PingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/freitaseric/listeners/InteractionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/listeners/InteractionListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +128,7 @@
       <updated>1712455890360</updated>
       <workItem from="1712455891387" duration="82000" />
       <workItem from="1712455984243" duration="1617000" />
-      <workItem from="1712457641936" duration="2069000" />
+      <workItem from="1712457641936" duration="4659000" />
     </task>
     <task id="LOCAL-00001" summary="chore: inital commit">
       <option name="closed" value="true" />
@@ -137,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712457941789</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: first command (/ping)">
+      <option name="closed" value="true" />
+      <created>1712460074937</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712460074937</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +155,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="chore: inital commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: inital commit" />
+    <MESSAGE value="feat: first command (/ping)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: first command (/ping)" />
   </component>
 </project>
