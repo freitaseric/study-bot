@@ -4,6 +4,7 @@ import io.github.cdimascio.dotenv.Dotenv;
 import me.freitaseric.database.DatabaseManager;
 import me.freitaseric.listeners.InteractionListener;
 import me.freitaseric.listeners.ReadyListener;
+import me.freitaseric.utils.Colors;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
@@ -12,6 +13,8 @@ import net.dv8tion.jda.api.interactions.commands.build.Commands;
 
 public class StudyBot {
     public static void main(String[] args) {
+        System.out.println(Colors.AQUAMARINE);
+
         Dotenv dotenv = Dotenv.load();
         JDA api = JDABuilder.createDefault(dotenv.get("TOKEN")).build();
         DatabaseManager db = new DatabaseManager();

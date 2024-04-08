@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c430b90-f42c-4b6f-9cf5-4d49eb78388a" name="Changes" comment="chore: initialize database setup">
+    <list default="true" id="4c430b90-f42c-4b6f-9cf5-4d49eb78388a" name="Changes" comment="feat: migrating commands for Kotlin">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/commands/utils/PingCommand.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/commands/utils/SearchCommand.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/utils/Colors.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/freitaseric/commands/utils/PingCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/freitaseric/commands/utils/SearchCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/freitaseric/listeners/InteractionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/listeners/InteractionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/freitaseric/StudyBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/StudyBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/freitaseric/commands/utils/PingCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/commands/utils/PingCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/freitaseric/commands/utils/SearchCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/commands/utils/SearchCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/freitaseric/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/database/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/freitaseric/database/domains/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/database/domains/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/freitaseric/listeners/ReadyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/freitaseric/listeners/ReadyListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +57,7 @@
         <option value="Class" />
         <option value="Kotlin Object" />
         <option value="Kotlin Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -89,31 +87,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Gradle.StudyBot [:StudyBot.main()].executor": "Run",
-    "Gradle.StudyBot [build].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/ericf/repos/StudyBot/src/main/java/me/freitaseric/Main.java",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.StudyBot [:StudyBot.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudyBot [build].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/ericf/repos/StudyBot/src/main/java/me/freitaseric/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "kotlin-gradle-user-dirs": [
-      "C:\\Users\\ericf\\.gradle"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ],
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;C:\\Users\\ericf\\.gradle&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.StudyBot">
     <configuration name="StudyBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.freitaseric.StudyBot" />
@@ -183,7 +184,9 @@
       <workItem from="1712525929310" duration="483000" />
       <workItem from="1712526428990" duration="999000" />
       <workItem from="1712535732434" duration="594000" />
-      <workItem from="1712540546210" duration="5195000" />
+      <workItem from="1712540546210" duration="5325000" />
+      <workItem from="1712575125677" duration="3445000" />
+      <workItem from="1712578617186" duration="482000" />
     </task>
     <task id="LOCAL-00001" summary="chore: inital commit">
       <option name="closed" value="true" />
@@ -217,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712545198765</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: migrating commands for Kotlin">
+      <option name="closed" value="true" />
+      <created>1712545950161</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712545950161</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +240,7 @@
     <MESSAGE value="feat: first command (/ping)" />
     <MESSAGE value="feat: search command" />
     <MESSAGE value="chore: initialize database setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: initialize database setup" />
+    <MESSAGE value="feat: migrating commands for Kotlin" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: migrating commands for Kotlin" />
   </component>
 </project>

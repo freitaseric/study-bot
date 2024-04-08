@@ -47,4 +47,26 @@ public class DatabaseManager {
         }
         return objClass;
     }
+
+    public long getPing() {
+        EntityTransaction transaction = this.entityManager.getTransaction();
+        long ping;
+
+        try {
+            long startTime = System.currentTimeMillis();
+            transaction.begin();
+            this.entityManager.createQuery("SELECT 1");
+            transaction.commit();
+            long endTime = System.currentTimeMillis();
+
+            ping = endTime - startTime;
+        } catch (Exception e) {
+            if (transaction.isActive()) transaction.rollback();
+            throw e;
+        } finally {
+            this.entityManager.close();
+        }
+
+        return ping;
+    }
 }
