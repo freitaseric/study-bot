@@ -20,16 +20,10 @@ public class InteractionListener extends ListenerAdapter {
         SlashCommandInteraction interaction = event.getInteraction();
 
         if (interaction.getName().equals("ping")) {
-            PingCommand command = new PingCommand();
-            command.run(event);
+            PingCommand command = new PingCommand(event);
         }
         if (interaction.getName().equals("search")) {
-            SearchCommand command = new SearchCommand();
-            try {
-                command.run(event);
-            } catch (IOException | URISyntaxException | InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            SearchCommand command = new SearchCommand(event);
         }
     }
 }

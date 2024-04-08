@@ -2,6 +2,7 @@ plugins {
     id("java")
     application
     id("com.github.johnrengelman.shadow") version "7.1.2"
+    kotlin("jvm")
 }
 
 application.mainClass = "me.freitaseric.studybot.Bot"
@@ -22,15 +23,17 @@ dependencies {
     implementation("net.dv8tion:JDA:$jdaVersion")
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation(kotlin("stdlib-jdk8"))
 }
 
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
     options.isIncremental = true
-
-    sourceCompatibility = "21"
 }
 
 tasks.test {
     useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(21)
 }

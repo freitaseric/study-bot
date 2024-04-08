@@ -1,10 +1,10 @@
-package me.freitaseric.commands.utils;
+package me.freitaseric.commands.utils
 
-import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
 
-public class PingCommand {
-    public void run(SlashCommandInteractionEvent event) {
-        long ping = event.getJDA().getGatewayPing();
-        event.reply(String.format("Gateway ping is `%sms`!", ping)).setEphemeral(true).queue();
+class PingCommand(private val event: SlashCommandInteractionEvent) {
+    init {
+        val ping: Long = event.jda.gatewayPing
+        event.reply(String.format("Gateway ping is `%sms`!", ping)).queue()
     }
 }
